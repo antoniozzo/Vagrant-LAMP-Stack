@@ -9,11 +9,11 @@
 IP_ADDRESS = "172.22.22.22"
 
 # Set project name & ext, used in domain
-PROJECT_NAME = "my_project"
+PROJECT_NAME = "myproject"
 PROJECT_EXT = "local"
 
 # Set db conig
-DB_NAME = "my_db"
+DB_NAME = "mydb"
 DB_PWD = "root"
 
 
@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
 				:db_name								=> DB_NAME,
 				:server_name						=> PROJECT_NAME + "." + PROJECT_EXT,
 				:server_aliases					=> ["www." + PROJECT_NAME + "." + PROJECT_EXT],
-				:docroot								=> "/var/www/" + PROJECT_NAME + "/public",
+				:docroot								=> "/var/www/" + PROJECT_NAME + "/www",
 				:packages								=> %w{ vim git screen curl },
 				:php_packages						=> %w{ php5-mysqlnd php5-curl php5-mcrypt php5-memcached php5-gd }
 			},
